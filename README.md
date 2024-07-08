@@ -9,8 +9,11 @@ Data Parsing: Uses BeautifulSoup to parse HTML and extract relevant information.
 CSV Export: Saves the scraped data into a CSV file for further analysis.
 
 #Requirements
+
 Python 3.10
+
 requests library
+
 beautifulsoup4 library
 
 #Installation
