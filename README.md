@@ -18,22 +18,27 @@ Clone the Repository:
 
 bash
 git clone https://github.com/aripardhana0/scraping-news.git
+
 cd news-scraping-program
+
 Create a Virtual Environment (optional but recommended):
 
-bash
 
 python -m venv venv
+
 Activate the Virtual Environment:
 
 Windows:
 bash
 
 venv\Scripts\activate
+
 macOS and Linux:
+
 bash
 
 source venv/bin/activate
+
 Install Dependencies:
 
 bash
@@ -42,19 +47,25 @@ pip install requests beautifulsoup4
 
 # Usage
 Set User-Agent:
+
 The program uses a custom user-agent to mimic a real browser request. Make sure to set the user-agent appropriately:
 
 python
 
 hades = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36'}
+
 Run the Script:
+
 Execute the script to start scraping:
 
 bash
 
 python scrape-news.py
+
 Output:
+
 The scraped data will be saved into a CSV file named news_data.csv.
+
 
 Example Code
 python
