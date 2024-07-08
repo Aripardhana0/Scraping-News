@@ -1,5 +1,5 @@
 
-## News Scraping Program
+# News Scraping Program
 
 This Python program scrapes news articles from websites using the requests library and BeautifulSoup for web scraping. The data is then saved into a CSV file.
 
@@ -67,28 +67,28 @@ import csv
 hades = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36'}
 
 # Function to scrape news
-def scrape_news():
-    url = 'https://example.com/news'
-    response = req.get(url, headers=hades)
-    soup = bs(response.text, 'html.parser')
-    
-    articles = soup.find_all('div', class_='article')
-    news_data = []
-
-    for article in articles:
-        title = article.find('h2').text
-        date = article.find('time').get('datetime')
-        summary = article.find('p').text
+    def scrape_news():
+        url = 'https://example.com/news'
+        response = req.get(url, headers=hades)
+        soup = bs(response.text, 'html.parser')
         
-        news_data.append([title, date, summary])
-
-    with open('news_data.csv', 'w', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Title', 'Date', 'Summary'])
-        writer.writerows(news_data)
-
-if __name__ == '__main__':
+        articles = soup.find_all('div', class_='article')
+        news_data = []
+    
+        for article in articles:
+            title = article.find('h2').text
+            date = article.find('time').get('datetime')
+            summary = article.find('p').text
+            
+            news_data.append([title, date, summary])
+    
+        with open('news_data.csv', 'w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Title', 'Date', 'Summary'])
+            writer.writerows(news_data)
+    if __name__ == '__main__':
     scrape_news()
+
 # Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
